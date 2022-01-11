@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="container" style="with:60%";margin-left:25%;margin-top:150px;">
+<h1>Statisque de vos données</h1>
+
+<div class="container1">
+<h2>Total des dépenses effectué<h2>
+<div>Montant total : <br/><span class="tot"> €</span></div>
+</div>
+
+<div class="container2">
+<h2>Top 10 des véhicules(dépenses)</h2>
+<div>Les immatriculations ci dessous</div>
+<div>
+    <p>Pas de vehicules mentionnées</p>
+      
+</div>
+</div>
+
+<div class="container3">
+<h3>Filtrer par période selon des date</h3>
+<form method="post" action="{{ path('rechers') }}">
+<div>start_date <input type="datetime-local" id="date_sart" name="date_sart" required>
+à <input type="datetime-local" id="date_end" name="date_end" required><br/>
+<button type="submit" id="envoyer">Envoyer</button>
+</form>
+</div>
+
+<div id="resultats"></div>
+</div>
+{% endblock %}

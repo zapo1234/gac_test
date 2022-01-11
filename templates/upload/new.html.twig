@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="container" style="with:40%";margin-left:40%;margin-top:150px;">
+<h1>Importer vos fichier csv</h1>
+{{ form_start(form) }}
+    {{ form_widget(form) }}
+    <button type="submit" class="btn" style="background-color:#eee;">envoyer</button>
+{{ form_end(form) }}
+</div>
+{% endblock %}
